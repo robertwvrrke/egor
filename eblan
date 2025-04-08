@@ -1,2 +1,24 @@
-https://discord.gg/DFkRydn24R
+local HWIDTable = loadstring(game:HttpGet("https://raw.githubusercontent.com/robertwvrrke/hwid/refs/heads/main/hwid"))()
+
+
+local HWID = "31444335-3833-5438-3058-5081409CEB73", -- сюда пишем свой хвид
+
+
+
+local isWhitelisted = false
+for i, v in pairs(HWIDTable) do
+    if v == HWID then
+        isWhitelisted = true
+        print("The HWID is Whitelisted. HWID: ", HWID)
+        break
+    end
+end
+
+
+--тут будет загружаться
+if isWhitelisted then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Horizon89002/Empyrean.lua/4ec78af7cc649036b73b9e7cc54c5ae80f93721e/Empyreandh.lua"))()
+else
+    print("The HWID is not Whitelisted. HWID: ", HWID)
+end
 
